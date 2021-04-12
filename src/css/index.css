@@ -19,10 +19,15 @@ a {
     text-decoration: none;
 }
 img {max-width: 100%;}
+input, button {outline: none;}
 
 .container {
     width: 1170px;
     margin: 0 auto;
+}
+.section__title {
+    font-size: 30px;
+    margin: 0 0 55px 0;
 }
 .pink-material {
     background-color: #F70046;
@@ -179,6 +184,102 @@ img {max-width: 100%;}
     border-radius: 6px;
     border: 2px solid #F70046;
     margin: 0 0 0 48px;
+}
+.facts-layer {
+    padding: 65px 0;
+    background: url('../img/facts.png') repeat;
+}
+.facts__title {
+    color: white;
+}
+.facts__list {
+    display: flex;
+    justify-content: space-between;
+    /*align-content: flex-start;*/
+}
+.fact__item {
+    width: 24%;
+    display: block;
+}
+.fact__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fact__value {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #F70046;
+    margin: 0 0 22px 0;
+}
+.fact__title {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    margin: 0 0 16px 0;
+}
+.fact__text {
+    font-size: 14px;
+    color: #888C98;
+    line-height: 145%;
+}
+.feedback-layer {
+    width: 100%;
+    background: url('../img/feedback.png') no-repeat;
+    /*background-position: top right;*/
+    background-position: bottom right;
+    background-size: auto;
+    /*background-position: 60% 0%;*/
+    background-clip: padding-box;
+    padding: 125px 0 60px 0;
+}
+.feedback {
+
+}
+.feedback__title {
+    font-size: 30px;
+    margin: 0 0 32px 410px;
+}
+.feedback__desc {
+    max-width: 650px;
+    text-align: center;
+    font-size: 18px;
+    color: #727272;
+    margin: 0 0 45px 255px;
+}
+.feedback__form {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 200px;
+}
+.feedback__fields {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+.feedback__field,
+.feedback__btn {
+    width: 225px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.feedback__field {
+    font-size: 14px;
+    text-indent: 14px;
+    color: #727272;
+    border: 1px solid #F70046;
+}
+.feedback__btn {font-size: 18px;}
+.feedback__btn:hover {color: #F70046;}
+.feedback__agree {
+    font-size: 14px;
+    color: #727272;
+    margin: 0 0 0 20px;
 }
 .footer-layer {
     background-color: var(--primary-color);
