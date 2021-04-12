@@ -26,6 +26,7 @@ input, button {outline: none;}
     margin: 0 auto;
 }
 .section__title {
+    color: #03163B;
     font-size: 30px;
     margin: 0 0 55px 0;
 }
@@ -185,6 +186,87 @@ input, button {outline: none;}
     border: 2px solid #F70046;
     margin: 0 0 0 48px;
 }
+.decisions-layer {
+    padding: 60px 0 0 0;
+}
+.decisions__list {
+    display: flex;
+    justify-content: space-between;
+}
+.decision {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.decision:nth-of-type(2n + 2) {flex-direction: column-reverse;}
+.decision__wrapper {
+    width: 100%;
+    height: 225px;
+    overflow: hidden;
+}
+.decision__img {
+    width: inherit;
+    height: inherit;
+    transition: var(--transition);
+}
+.decision__img:hover {
+    transform: scale(1.05);
+    filter: grayscale(30%);
+}
+.decision__card {
+    height: 225px;
+    background-color: var(--primary-color);
+    padding: 16px;
+}
+.decision__icon {
+    margin: 0 0 16px 0;
+}
+.decision__title {
+    font-size: 18px;
+    color: white;
+    margin: 0 0 24px 0;
+}
+.decision__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+    color: #3A4963;
+}
+.additional-layer {padding: 75px 0;}
+.additional__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.additional__item {
+    width: 24%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.additional__item:hover .additional__img {
+    transform: scale(1.02);
+    filter: grayscale(50%);
+}
+.additional__img {
+    transition: var(--transition);
+    object-fit: contain;
+    border-radius: 16px;
+    margin: 0 0 14px 0;
+}
+.additional__heading {
+    font-size: 18px;
+    text-decoration: underline;
+    color: var(--primary-color);
+    margin: 0 0 12px 0;
+}
+.additional__text {
+    font-size: 14px;
+    color: #727272;
+    padding: 0 6px;
+}
 .facts-layer {
     padding: 65px 0;
     background: url('../img/facts.png') repeat;
@@ -194,8 +276,8 @@ input, button {outline: none;}
 }
 .facts__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    /*align-content: flex-start;*/
 }
 .fact__item {
     width: 24%;
@@ -344,7 +426,8 @@ input, button {outline: none;}
     margin: 0 0 30px 0;
 }
 .footer__contact:nth-last-of-type(1) {font-size: 14px;}
-.footer__contact:nth-last-of-type(2) {align-items: center;}
+.footer__contact:nth-last-of-type(1),
+.footer__contact:nth-child(3) {align-items: center;}
 .footer__icon {
     width: 20px;
     margin: 0 6px 0 0;
