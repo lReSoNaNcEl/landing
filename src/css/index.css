@@ -178,6 +178,63 @@ input, button {outline: none;}
     border: 2px solid #F70046;
     margin: 0 0 0 48px;
 }
+.transportation-layer {
+    padding: 70px 0 0 0;
+}
+.transportation__list {
+    display: flex;
+    justify-content: space-between;
+}
+.transportation__item:nth-of-type(1) {background: url('../img/transportation/1.png') no-repeat;}
+.transportation__item:nth-of-type(2) {background: url('../img/transportation/2.png') no-repeat;}
+.transportation__item:nth-of-type(3) {background: url('../img/transportation/3.png') no-repeat;}
+.transportation__item:nth-of-type(4) {background: url('../img/transportation/4.png') no-repeat;}
+.transportation__item:nth-of-type(1n + 1) {background-size: cover;}
+.transportation__item {
+    width: 22.6%;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    background-size: cover;
+    position: relative;
+    transition: .4s ease-in;
+    overflow: hidden;
+    color: white;
+    padding: 70px 4px 40px 12px;
+}
+.transportation__item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: inherit;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+}
+.transportation__item:hover::before {
+    top: -100%;
+    left: -100%;
+    border-radius: 50%;
+}
+.transportation__item:hover .transportation__link {
+    color: #F70046;
+}
+.transportation__heading {
+    font-size: 18px;
+}
+.transportation__desc {
+    font-size: 14px;
+}
+.transportation__link {
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+    transition: var(--transition);
+}
 .decisions-layer {
     padding: 60px 0 0 0;
 }
